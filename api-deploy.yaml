@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  webapi
+  labels:
+    app:  webapi
+spec:
+  selector:
+    matchLabels:
+      app: webapi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  webapi
+    spec:
+      containers:
+      - name:  webapi
+        image:  asia.gcr.io/digisense-293411/webapi
+        ports:
+        - containerPort:  80
+      restartPolicy: Always
