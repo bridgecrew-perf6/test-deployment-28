@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: digisense-microservices
+  nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   rules:
   - http:
