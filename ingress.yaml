@@ -6,7 +6,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /*
+        - path: /admin/*
           backend:
             serviceName: admin-portal-svc
             servicePort: 8001
